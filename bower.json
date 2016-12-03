@@ -1,0 +1,21 @@
+{
+  "name": "ipl-app",
+  "authors": [
+    "naveenpv <naveennpv.navi@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "handlebars": "^4.0.5"
+  }
+}

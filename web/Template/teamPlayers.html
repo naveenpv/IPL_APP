@@ -1,0 +1,23 @@
+<!--Displaying the teams player dynamically using  Handlebars and displays the rescpective
+players information when user moves cursor on the particular player-->
+<div class="main-content">
+    <div class="all-teams page">
+        <ul class="teams-list" style="margin-left:10px">
+            <script id="players-template" type="x-handlebars-template">​
+			       {{#each this}}
+						<li data-index="{{id}}">
+							<a href="#{{player_name}}" class="team-photo"><img src="{{player_img_url}}" height="130" alt="{{player_name}}"/></a>
+							 <span class="text">
+                                <h4>Role:<i>{{player_role}}</i></h4>
+                                <h4>Batting Style:<i>{{player_batting_style}}</i></h4>
+                                <h4>Bowling Style:<i>{{player_bowling_style}}</i></h4>
+                                <h4>Date Of Birth:<i>{{player_dob}}</i></h4>
+                                <h4>Nationality:<i>{{player_nationality}}</i></h4>
+                             </span>
+                                <h2><i>{{player_name}}</i></h2>
+							</li>
+					{{/each}}
+		</script>
+        </ul>
+    </div>
+</div>

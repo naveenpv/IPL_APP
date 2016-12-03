@@ -1,0 +1,160 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+body{
+	font: normal 16px Arial, Helvetica, sans-serif;
+}
+
+h1, h3{
+	font: normal 24px 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+
+
+/*-----------------
+	Main Content
+------------------*/
+
+
+.main-content{
+	box-sizing: border-box;
+	text-align: center;
+	margin: 125px auto 60px;
+	padding: 0 40px;
+}
+
+.main-content h3{
+	font-size: 28px;
+	color:  #5a96b9;
+	padding-bottom: 20px;
+}
+
+@media (max-width: 600px){
+
+	.main-content{
+		margin: 45px auto;
+		padding: 0 25px;
+	}
+
+}
+
+
+/*	Teams List	*/
+
+.all-teams h3{
+	opacity: 0;
+}
+
+.teams-list{
+	list-style:none;
+	margin-left:225px;
+	max-width: 1500px;
+	text-align: center;
+	padding: 0;
+	opacity: 1;
+	font-size: 0;
+}
+
+.all-teams.visible .teams-list,
+.all-teams.visible .filters,
+.all-teams.visible h3{
+	opacity: 1;
+	transition: 1s;
+	pointer-events: auto;
+}
+
+.teams-list > li{
+	box-sizing:border-box;
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	transition: 0.2s;
+
+	text-align:left;
+	font:normal 12px sans-serif;
+
+	background-color:#ffffff;
+	border:1px solid #dbe3e7;
+	border-radius: 3px;
+	box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.08);
+
+	margin: 0 12px 14px 0;
+	padding: 25px;
+}
+
+.teams-list > li.hidden{
+	opacity: 0.2;
+	pointer-events: none;
+}
+
+/* The Team image */
+
+.teams-list .team-photo{
+	display: block;
+	text-align: center;
+	box-shadow : 0 0 20px 8px #f3f3f3 inset;
+
+	width: 275px;
+	margin-bottom: 25px;
+	padding: 20px 0;
+	box-sizing: border-box;
+}
+
+/* The Team name */
+
+.teams-list h2{
+	display: block;
+	font-size: 18px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	max-width: 200px;
+	margin:0;
+}
+
+.teams-list h2 a{
+	text-decoration: none;
+	color: #2B2E31;
+}
+
+
+
+
+/* Making the list responsive */
+
+@media (max-width: 800px){
+
+	.teams-list .team-photo{
+		width: 225px;
+	}
+
+}
+
+/* Team description */
+.text {
+    position: absolute;
+    top: 0;
+    color:#f00;
+    background-color:rgba(255,255,255,0.8);
+    width: 225px;
+    height: 247px;
+    line-height:100px;
+    text-align: middle;
+    z-index: 10;
+    opacity: 0;
+	font-size: 10px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.text:hover {
+    opacity:1;
+}
+ 
+
+img {
+    z-index:1;
+}

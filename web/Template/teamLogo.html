@@ -1,0 +1,17 @@
+<!--Displaying the teams logo dynamically using  Handlebars -->
+<div class="main-content">
+
+	<div class="all-teams page">
+		<ul class="teams-list" style="margin-left:10px">
+			<script id="teams-template" type="x-handlebars-template">​
+					{{#each this}}
+						<li data-index="{{id}}">
+							<a href="#" class="team-photo"><img src="{{team_img_url}}" height="130" alt="{{team_info.team_name}}"/></a>
+							<h2><a href="#"> {{team_name}} </a></h2>
+							
+							</li>
+					{{/each}}
+				</script>
+		</ul>
+	</div>
+</div>
